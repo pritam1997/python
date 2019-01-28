@@ -1,4 +1,4 @@
-n = int(input("Enter odd no. : "))
+n = int(input("Enter no. : "))
 # like no. is 5
 # printing 5 times and decrementing by 1 in loop (5-1)
 l = []
