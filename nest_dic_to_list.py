@@ -1,45 +1,26 @@
-stud0 = {"id":"01",
-		"name":{
-			"firstname":"Connor",
+stud1 = {"id":"01",			#0
+		"name":{			#1	
+			"firstname":"Connor",	
 			"middlename":"Haytham",
 			"lastname":"Kenway"},
-		"location":{
+		"location":{		#2
 			"line_1":"644-Block",
 			"line_2":"Boston",
 			"line_3":"USA"}}
-# stud1 = {"id":"01",
-# 		"name":{
-# 			"firstname":"Connor",
-# 			"middlename":"Haytham",
-# 			"lastname":"Kenway"},
-# 		"location":{
-# 			"line_1":"644-Block",
-# 			"line_2":"Boston",
-# 			"line_3":"USA"}}
-# stud2 = {"id":"01",
-# 		"name":{
-# 			"firstname":"Connor",
-# 			"middlename":"Haytham",
-# 			"lastname":"Kenway"},
-# 		"location":{
-# 			"line_1":"644-Block",
-# 			"line_2":"Boston",
-# 			"line_3":"USA"}}
-# stud3 = {"id":"01",
-# 		"name":{
-# 			"firstname":"Connor",
-# 			"middlename":"Haytham",
-# 			"lastname":"Kenway"},
-# 		"location":{
-# 			"line_1":"644-Block",
-# 			"line_2":"Boston",
-# 			"line_3":"USA"}}
-l=[]
-stud0={"asd":"sdsd","asdsad":{"werwer":"trtr"}}
-for k in stud0.items():
-	l.append(k)
 
-# print(l)
-for i in l[:]:
-	l[i]=list(i)
+l=[]
+for k,v in stud1.items():
+	if k=="id":
+		l.append([k,v])
+	if k=="name":
+		l.append([k])
+		for x in stud1["name"].items():
+			m=list(x)
+			l[1].append(m)
+	if k=="location":
+		l.append([k])
+		for x in stud1["location"].items():
+			m=list(x)
+			l[2].append(m)
+	
 print(l)
