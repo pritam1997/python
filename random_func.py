@@ -1,7 +1,7 @@
 from random import random
 
 print("\n")
-print("---------Lets guess your luck with your name------------")
+print("---------Lets guess your luck------------")
 print("\n")
 
 s=str(input("Enter your name : "))
