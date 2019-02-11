@@ -11,7 +11,7 @@ if len(s)==0:
 
 r=random()
 
-if r<0.5:
-	print("!!!!!!!!Unlucky.......")
-else:
+if r>=0.5:
 	print("@@@@@@You are lucky....")
+else:
+	print("!!!!!!!!Unlucky.......")
