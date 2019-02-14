@@ -1,13 +1,17 @@
 s = input("Enter any word : ")
-
 c=len(s)
-print(c)
+
 def word(s,c):
-	print(s[-1])
+	print(f"Last letter of word is : {s[-1]}")
 
 def sent(s,c):
-	for x in range(-1):
-		if s[c] == " ":
-
+	n=0
+	for x in range(-1,-c,-1):
+		n+=1
+		if s[x] == " ":
+			break
+	print(f"\n-------Last word of sentence is : ---------")
+	for a in range(-n+1,0):
+		print(f"------{s[a]}------")
 word(s,c)
-zsent(s,c)
+sent(s,c)
