@@ -7,7 +7,7 @@ class student:
 	def student_details(self):
 		return f"{self.name.capitalize()},{self.rollno}"
 
-	def standard_marks(self,std,marks):
+	def standard(self,std):
 		if std<1 or std>10:
 			print("Standard upto 1 to 10")
 		else:
@@ -20,14 +20,29 @@ class student:
 				e='rd'
 			else:
 				e='th'
-			return f"{self.name.capitalize()} got {marks}% in {std}{e} Standard"
+			return f"{self.name.capitalize()} studying in {std}{e} Standard"
+	
+	def percentage(self,percent):
+		if percent<35:
+			print("Failed student")
+		elif percent>35 and percent<49:
+			print("Poor student")
+		elif percent<50 and percent<59:
+			print("Satisfactory student")
+		elif percent>60 and percent<69:
+			print("Good student")
+		elif percent>70 and percent<84:
+			print("Very Good student")
+		elif percent>85:
+			print("Excellent")
+		return f"{percent}%"
 
 	def age(self,ag):
 		return f"{self.name.capitalize()} is {ag} year old"
 
 	def dob(self,date,mon,yr):
-		if yr <1998 or yr >2014:
-			print("Only 1998 to 2014 birth student are allow")
+		if yr <1998 or yr >2018:
+			print("Only 1998 to 2014 years students are allow")
 		else:
 			n=2019-yr
 			print(self.age(n))	
@@ -37,16 +52,23 @@ class student:
 		return f"{self.name.capitalize()} is interested in {sp}"
 
 s=student("sujit",12)
-a=s.standard_marks(9,80)
+a=s.standard(9)
+print(a)
+a=s.percentage(75)
 print(a)
 a=s.dob(10,12,1999)
 print(a)
 a=s.sports("football")
+print(a)
+
+print("\n")
 
 s1=student("rohit",34)
-a=s1.standard_marks(3,90)
+a=s1.standard(3)
+print(a)
+a=s1.percentage(80)
 print(a)
 a=s1.dob(1,2,2015)
 print(a)
 a=s1.sports("chess")
-
+print(a)
